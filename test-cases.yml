@@ -155,24 +155,9 @@
     В таблице Users rating список игроков отфильтрован по данным Rank, Rating, Game played, Joined
 
 - summary:
-    Проверка возможности просмотра Tasks
-  requirement:
-    Пользователь имеет возможность просматривать Tasks
-  prerequisites:
-    Пользователь авторизован
-  test-data:
-    No data
-  steps:
-    - Нажать на блок навигации пользователя
-    - В дроп-даун меню нажать на Tasks
-    - В выбранной task нажать на кнопку Show
-  expected-result:
-    Открыта страница с описанием task
-
-- summary:
     Проверка возможности смены языка при просмотре Task
   requirement:
-    пользователь имеет возможность просматривать Tasks на русском и английском языках
+    Пользователь имеет возможность просматривать Tasks на русском и английском языках
   prerequisites:
     Пользователь авторизован
   test-data:
@@ -184,6 +169,97 @@
     - В открытой странице с task сменить чек бокс с английского на русский
   expected-result:
     Текст task сменился с английского языка на русский
+
+- summary:
+    Проверка возможности общения с пользователями в чате
+  requirement:
+    Пользователи имеют возможность общаться в чате
+  prerequisites:
+    Пользователь авторизован
+  test-data:
+    No data
+  steps:
+    - В текстовом поле написать сообщение
+    - Прикрепить реакцию в виде smile
+    - Нажать кнопку Send
+  expected-result:
+    Сообщение отображено в General чате
+
+- summary:
+    Проверка создания нового турнира
+  requirement:
+    Пользователь имеет право на создание нового турнира
+  prerequisites:
+    Пользователь авторизован
+  test-data:
+    No data
+  steps:
+    - Нажать на TOURNAMENTS
+    - Нажать на You may want to create one
+    - Открывается страница Create a new tournament
+    - Заполнить поле NAME
+    - Выбрать TYPE из предложенных individual, team, stairway, swiss, ladder
+    - Заполнить поле Description
+    - Выбрать дату и время
+    - Выбрать Access type из предложенных pablic, token
+    - Выбрать Task strategy из предложенных game, round
+    - Выбрать Task provider из предложенных level, task_pack, tags
+    - Выбрать Level из предложенных elementary, easy, medium, hard
+    - Установить Players limit из предложенных данных
+    - Выбрать Default language из предложенных 
+    - Установить Math timeout seconds
+    - Установить Break duration seconds
+    - Нажать кнопку Create
+  expected-result:
+    Создан новый турнир
+
+- summary:
+    Проверка возможности отмены турнира
+  requirement:
+    Пользователь имеет право на создание и отмену турнира
+  prerequisites:
+    Пользователь авторизован
+  test-data:
+    No data
+  steps:
+    - Открыть страницу Tournaments
+    - Выбрать созданный турнир
+    - Нажать на кнопку Show
+    - Нажать на чекбокс Start
+    - Выбрать поле Cancel
+  expected-result:
+    Появляется сообщение об отмене турнира
+
+- summary:
+    Проверка выхода из игры
+  requirement:
+    Пользователь имеет право выйти из игры
+  prerequisites:
+    Пользователь авторизован
+  test-data:
+    No data
+  steps:
+    - Нажать на блок навигации пользователя
+    - В дроп-даун меню нажать на Sign Out
+  expected-result:
+    Пользователь вышел из игры
+
+- summary:
+    Возможность просмотра завершенной игры
+  requirement:
+    Завершенная игра доступна в записи
+  prerequisites:
+    Пользователь авторизован
+  test-data:
+    No data
+  steps:
+    - На странице с играми нажать кнопку Completed Games
+    - В выбранной игре нажать кнопку Show
+  expected-result:
+    Открыта страница завершенной игры с описанием задачи, примерами, решенинием соревнующихся игроков
+    
+    
+  
     
   
     
