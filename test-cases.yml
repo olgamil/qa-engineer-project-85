@@ -306,7 +306,7 @@
     - Выбрать Level
     - Выбрать Game type WITH A Friend
     - Выбрать Time control
-    - Выбрать оппонента
+    - Выбрать оппонента в поле Choose opponent
     - Выбрать задачу по названиям или тегам
     - Нажать кнопку Create invite 
   expected-result:
